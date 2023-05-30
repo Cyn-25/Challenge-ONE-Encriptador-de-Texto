@@ -4,9 +4,8 @@ const copia = document.querySelector(".botonCopiar")
 copia.style.display = "none"
 
 function validarTexto(){
-    const espacio = " "
     let escribirTexto = document.querySelector(".escribirTexto").value;
-    let sinAcentos = escribirTexto.match(/^[a-z][espacio, ","]*$/);
+    let sinAcentos = escribirTexto.match(/^[a-z ]*$/);
 
     if(!sinAcentos || sinAcentos === 0) {
         alert("No utilizar mayúsculas ni acentos")
