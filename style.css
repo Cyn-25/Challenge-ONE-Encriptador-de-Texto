@@ -1,0 +1,832 @@
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    background-image: url(imagenes/RCPD_BLUEblur.png);
+    background-size: 105%;
+    /*background: rgb(33, 33, 34);*/
+
+}
+
+#umbrella{
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    top: 1%;
+    left: 1%;
+}
+.contenido{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.escribirTexto{
+    padding: 20px;
+    position: absolute;
+    width: 40%;
+    height: 50%;
+    left: 12%;
+    top: 20%;
+    border: none;
+    line-height: 150%;
+    /*background-image: url(imagenes/Yellow-paper.jpg);
+    background-size: 150%;*/
+    background-color: #1a1a1c;
+    color: #ecebeb;
+    font-weight: 400;
+    font-size: 32px;
+    align-items: center;
+
+}
+
+.escribirTexto:focus,.escribirTexto:active{
+    border: none;
+    outline: none;
+}
+
+.advertencia{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width:80%; 
+    left: 12.5%;
+    top: 81%;
+}
+
+.advertencia p{
+    color:rgb(230, 230, 230);
+    font-size: 12px;
+}
+
+.botones{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding:1% 0%;
+    position: absolute;
+    font-size:25px;
+    color: antiquewhite;
+    border-radius: 12px;
+    font-weight: bold;
+    left: 12%;
+    top: 81%;
+    width:45%;
+    font-family: "Inter";
+}
+
+.botonEncriptar{
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    background-color: #121214;;
+    border-radius: 12px;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #fff;
+
+    
+}
+
+.botonDesencriptar{
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    background-color: #3f0517;
+    border-radius: 12px;
+    line-height: 19px;
+    text-align: center;
+    color: #fff;
+}
+
+.botonCopiar{
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    border-radius: 12px;
+    line-height: 19px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+
+}
+.botonEncriptar, .botonCopiar, .botonDesencriptar{
+    width: 35%;
+    border-radius: 8px;
+    font-size: 18px;
+    margin: .2%;
+}
+.botonEncriptar:hover, .botonDesencriptar:hover,
+.botonCopiar:hover {
+  margin: 0.3%;
+  width: 35.5%;
+  padding: 2.2%;
+}
+
+.mensaje{
+    height: 513px;
+    width: 239px;
+    background: #1a1a1c;
+    background-image: url(imagenes/Mono.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    border-radius: 24px;
+    color: #0A3871;
+    margin-left: 65%;
+    margin-top: 71px;
+    padding-left: 20px;
+    background-size: 110%;
+    position: absolute;
+    color: #ecebeb;
+    font-weight: 400;
+    font-size: 32px;
+    padding: 51px;
+}
+.mensaje:focus {
+    outline: none;
+}
+
+footer p{
+    color: #ecebeb;
+    text-align: center;
+    top:0px;
+    position: relative;
+}
+
+.redes{
+    min-width: 700px;
+    display: flex;
+    justify-content: space-around;
+}
+#linkedin:hover, #artstation:hover, #github:hover, #behance:hover{
+    margin: 0.1%;
+    width: 61px;
+    padding: .1%;
+    box-shadow: 2px 2px 5px rgba(91, 68, 85, 0.5);
+}
+
+.redes a{
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #f1f1f1;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(68, 85, 91, 0.5);
+    transition: all .4s ease-in-out;
+}
+
+alert{
+    font-size: 20px;
+}
+
+
+/* Responsive design */
+@media screen and (max-width:374px) and (min-width: 100px){
+    body{
+        background-size: 605%;
+        background-position: 50%;
+        /*background: rgb(33, 33, 34);*/
+    }
+    #umbrella{
+        position: fixed;
+        width: 18%;
+        height: 10%;
+        top: 1.5%;
+        left: 44%;
+    }
+    .contenido {
+        display: flex;
+        flex-direction: row;
+    }
+    .encriptar {
+        width: 100%;
+    }
+    .escribirTexto {
+        width: 69.5%;
+        height: 42.5%;
+        left: 14%;
+        top: 12%;
+        font-size: 22px;
+    }
+    .advertencia {
+        width: 80%;
+        left: 15%;
+        top: 62%;
+    }
+    .advertencia p {
+        font-size: 10px;
+    }
+    .botones{
+        width: 75%;
+        left: 14%;
+        top: 64%;
+    }
+    
+    .botonEncriptar, .botonCopiar, .botonDesencriptar{
+        width: 45%;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+    .botonEncriptar:hover,
+    .botonCopiar:hover, .botonDesencriptar:hover {
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+    }
+    .mensaje{
+        background-position: center -387px;
+        background-size: 125%;
+        width: 258px;
+        height: 105px;
+        margin-left: -322px;
+        margin-top: 477px;
+    }
+    .mensaje:focus {
+        outline: none;
+    }
+    footer p{
+        color: #ecebeb;
+        top: 96.5%;
+        position: fixed;
+        font-size: 12px;
+        left: 27%;
+    }
+    .redes{
+        position: fixed;
+        top: 89%;
+        text-align: center;
+        justify-content: space-around;
+        min-width: 330px;
+        left: 10%;
+    }
+    .redes a{
+        font-size: 20px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        line-height: 38px;
+    }
+}
+
+@media screen and (max-width:374px) and (min-width: 250px){
+    body{
+        background-size: 605%;
+        background-position: 50%;
+        /*background: rgb(33, 33, 34);*/
+    }
+    #umbrella{
+        position: fixed;
+        width: 18%;
+        height: 10%;
+        top: 1.5%;
+        left: 44%;
+    }
+    .contenido {
+        display: flex;
+        flex-direction: row;
+    }
+    .encriptar {
+        width: 100%;
+    }
+    .escribirTexto {
+        width: 60.5%;
+        height: 42.5%;
+        left: 14%;
+        top: 12%;
+        font-size: 22px;
+    }
+    .advertencia {
+        width: 80%;
+        left: 15%;
+        top: 62%;
+    }
+    .advertencia p {
+        font-size: 10px;
+    }
+    .botones{
+        width: 75%;
+        left: 14%;
+        top: 64%;
+    }
+    
+    .botonEncriptar, .botonCopiar, .botonDesencriptar{
+        width: 45%;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+    .botonEncriptar:hover,
+    .botonCopiar:hover, .botonDesencriptar:hover {
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+    }
+    .mensaje{
+        background-position: center -356px;
+        background-size: 125%;
+        width: 223px;
+        height: 73px;
+        margin-left: -311px;
+        margin-top: 523px;
+        padding: 18px;
+        font-size: 22px;
+    }
+    .mensaje:focus {
+        outline: none;
+    }
+    footer p{
+        color: #ecebeb;
+        top: 96.5%;
+        position: fixed;
+        font-size: 12px;
+        left: 27%;
+    }
+    .redes{
+        position: fixed;
+        top: 89%;
+        text-align: center;
+        justify-content: space-around;
+        min-width: 330px;
+        left: 10%;
+    }
+    .redes a{
+        font-size: 20px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        line-height: 38px;
+    }
+}
+
+@media screen and (max-width:414px) and (min-width: 375px){
+    body{
+        background-size: 605%;
+        background-position: 50%;
+        /*background: rgb(33, 33, 34);*/
+    }
+    #umbrella{
+        position: fixed;
+        width: 18%;
+        height: 10%;
+        top: 1.5%;
+        left: 44%;
+    }
+    .contenido {
+        display: flex;
+        flex-direction: row;
+    }
+    .encriptar {
+        width: 100%;
+    }
+    .escribirTexto {
+        width: 65.5%;
+        height: 43.5%;
+        left: 14%;
+        top: 12%;
+        font-size: 22px;
+        padding: 18px;
+    }
+    .advertencia {
+        width: 80%;
+        left: 15%;
+        top: 62%;
+    }
+    .advertencia p {
+        font-size: 10px;
+    }
+    .botones{
+        width: 75%;
+        left: 14%;
+        top: 64%;
+    }
+    
+    .botonEncriptar, .botonCopiar, .botonDesencriptar{
+        width: 45%;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+    .botonEncriptar:hover,
+    .botonCopiar:hover, .botonDesencriptar:hover {
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+    }
+    .mensaje{
+        background-position: center -397px;
+        background-size: 125%;
+        width: 250px;
+        height: 75px;
+        margin-left: -327px;
+        margin-top: 586px;
+        padding: 18px;
+    }
+    .mensaje:focus {
+        outline: none;
+    }
+    footer p{
+        color: #ecebeb;
+        top: 96.5%;
+        position: fixed;
+        font-size: 12px;
+        left: 27%;
+    }
+    .redes{
+        position: fixed;
+        top: 89%;
+        text-align: center;
+        justify-content: space-around;
+        min-width: 330px;
+        left: 10%;
+    }
+    .redes a{
+        font-size: 20px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        line-height: 38px;
+    }
+}
+
+@media screen and (max-width:540px) and (min-width: 414px){
+    body{
+        background-size: 455%;
+        background-position: 50%;
+    }
+    #umbrella{
+        position: fixed;
+        width: 15%;
+        height: 7%;
+        top: 2%;
+        left: 44%;
+    }
+    .contenido {
+        display: flex;
+        flex-direction: row;
+    }
+    .encriptar {
+        width: 100%;
+    }
+    .escribirTexto {
+        width: 64.5%;
+        height: 42.5%;
+        left: 14%;
+        top: 12%;
+        font-size: 22px;
+        padding: 22px;
+    }
+    .advertencia {
+        width: 80%;
+        left: 15%;
+        top: 62%;
+    }
+    .advertencia p {
+        font-size: 12px;
+    }
+    .botones{
+        width: 75%;
+        left: 14%;
+        top: 64%;
+    }
+
+    .botonEncriptar, .botonCopiar, .botonDesencriptar{
+        width: 45%;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+    .botonEncriptar:hover,
+    .botonCopiar:hover, .botonDesencriptar:hover {
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+    }
+    .mensaje{
+        background-position: center -437px;
+        background-size: 130%;
+        width: 264px;
+        height: 92px;
+        margin-left: -356px;
+        margin-top: 646px;
+        padding: 22px;
+    }
+    .mensaje:focus {
+        outline: none;
+    }
+    footer p{
+        color: #ecebeb;
+        top: 96.5%;
+        position: fixed;
+        font-size: 14px;
+        left: 25%;
+    }
+    .redes{
+        position: fixed;
+        top: 90.5%;
+        text-align: center;
+        justify-content: space-around;
+        min-width: 330px;
+        left: 10%;
+    }
+    .redes a{
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width:750px) and (min-width: 541px){
+    body{
+        background-size: 305%;
+        background-position: 50%;
+    }
+    #umbrella{
+        position: fixed;
+        width: 15%;
+        height: 9%;
+        top: 2%;
+        left: 44%;
+    }
+    .contenido {
+        display: flex;
+        flex-direction: row;
+    }
+    .encriptar {
+        width: 100%;
+    }
+    .escribirTexto {
+        width: 74.5%;
+        height: 47.5%;
+        left: 14%;
+        top: 12%;
+        font-size: 28px;
+    }
+    .advertencia {
+        width: 80%;
+        left: 15%;
+        top: 62.5%;
+    }
+    .advertencia p {
+        font-size: 16px;
+    }
+    .botones{
+        width: 75%;
+        left: 14%;
+        top: 64%;
+    }
+
+    .botonEncriptar, .botonCopiar, .botonDesencriptar{
+        width: 45%;
+        border-radius: 8px;
+        font-size: 23px;
+    }
+    .botonEncriptar:hover,
+    .botonCopiar:hover, .botonDesencriptar:hover {
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+    }
+    .mensaje{
+        background-position: center -841px;
+        background-size: 110%;
+        width: 653px;
+        height: 210px;
+        margin-left: -779px;
+        margin-top: 967px;
+    }
+    .mensaje:focus {
+        outline: none;
+    }
+    
+    footer p{
+        color: #ecebeb;
+        top: 97%;
+        position: fixed;
+        font-size: 22px;
+        left: 33%;
+    }
+    .redes{
+        position: fixed;
+        top: 89%;
+        text-align: center;
+        justify-content: space-around;
+        min-width: 670px;
+        left: 10%;
+    }
+    .redes a{
+        font-size: 40px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        line-height: 70px;
+    }
+}
+
+@media screen and (max-width:819px) and (min-width: 750px){
+    body{
+        background-size: 305%;
+        background-position: 50%;
+    }
+    #umbrella{
+        position: fixed;
+        width: 15%;
+        height: 9%;
+        top: 2%;
+        left: 44%;
+    }
+    .contenido {
+        display: flex;
+        flex-direction: row;
+    }
+    .encriptar {
+        width: 100%;
+    }
+    .escribirTexto {
+        width: 70.5%;
+        height: 44%;
+        left: 14%;
+        top: 12%;
+        font-size: 28px;
+    }
+    .advertencia {
+        width: 80%;
+        left: 15%;
+        top: 62.5%;
+    }
+    .advertencia p {
+        font-size: 16px;
+    }
+    .botones{
+        width: 75%;
+        left: 14%;
+        top: 64%;
+    }
+
+    .botonEncriptar, .botonCopiar, .botonDesencriptar{
+        width: 45%;
+        border-radius: 8px;
+        font-size: 23px;
+    }
+    .botonEncriptar:hover,
+    .botonCopiar:hover, .botonDesencriptar:hover {
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+    }
+    .mensaje{
+        background-position: center -732px;
+        background-size: 110%;
+        width: 489px;
+        height: 59px;
+        margin-left: -666px;
+        margin-top: 733px;
+    }
+    .mensaje:focus {
+        outline: none;
+    }
+    
+    footer p{
+        color: #ecebeb;
+        top: 97%;
+        position: fixed;
+        font-size: 22px;
+        left: 33%;
+    }
+    .redes{
+        position: fixed;
+        top: 89%;
+        text-align: center;
+        justify-content: space-around;
+        min-width: 670px;
+        left: 10%;
+    }
+    .redes a{
+        font-size: 40px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        line-height: 70px;
+    }
+}
+
+@media screen and (max-width:1000px) and (min-width: 820px){
+    body{
+        background-size: 305%;
+        background-position: 50%;
+    }
+    #umbrella{
+        position: fixed;
+        width: 15%;
+        height: 9%;
+        top: 2%;
+        left: 44%;
+    }
+    .contenido {
+        display: flex;
+        flex-direction: row;
+    }
+    .encriptar {
+        width: 100%;
+    }
+    .escribirTexto {
+        width: 70.5%;
+        height: 44%;
+        left: 14%;
+        top: 12%;
+        font-size: 28px;
+    }
+    .advertencia {
+        width: 80%;
+        left: 15%;
+        top: 62.5%;
+    }
+    .advertencia p {
+        font-size: 16px;
+    }
+    .botones{
+        width: 75%;
+        left: 14%;
+        top: 64%;
+    }
+
+    .botonEncriptar, .botonCopiar, .botonDesencriptar{
+        width: 45%;
+        border-radius: 8px;
+        font-size: 23px;
+    }
+    .botonEncriptar:hover,
+    .botonCopiar:hover, .botonDesencriptar:hover {
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+    }
+    .mensaje{
+        background-position: center -765px;
+        background-size: 110%;
+        width: 566px;
+        height: 123px;
+        margin-left: -706px;
+        margin-top: 835px;
+        padding: 30px;
+    }
+    .mensaje:focus {
+        outline: none;
+    }
+    
+    footer p{
+        color: #ecebeb;
+        top: 97%;
+        position: fixed;
+        font-size: 22px;
+        left: 33%;
+    }
+    .redes{
+        position: fixed;
+        top: 89%;
+        text-align: center;
+        justify-content: space-around;
+        min-width: 670px;
+        left: 10%;
+    }
+    .redes a{
+        font-size: 40px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        line-height: 70px;
+    }
+}
+
+@media screen and (max-width:1300px) and (min-width: 1001px){
+    body{
+        background-size: 122%;
+        background-position: 50%;
+    }
+}
