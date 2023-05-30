@@ -21,7 +21,7 @@ body{
 .contenido{
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 89vh;
 }
 
 .escribirTexto{
@@ -134,7 +134,7 @@ body{
 }
 
 .mensaje{
-    height: 513px;
+    height: 485px;
     width: 239px;
     background: #1a1a1c;
     background-image: url(imagenes/Mono.png);
@@ -429,10 +429,10 @@ alert{
         padding: 1.8%;
     }
     .mensaje{
-        background-position: center -397px;
+        background-position: center -381px;
         background-size: 125%;
         width: 250px;
-        height: 75px;
+        height: 114px;
         margin-left: -327px;
         margin-top: 586px;
         padding: 18px;
@@ -522,9 +522,9 @@ alert{
         background-position: center -437px;
         background-size: 130%;
         width: 264px;
-        height: 92px;
+        height: 106px;
         margin-left: -356px;
-        margin-top: 646px;
+        margin-top: 617px;
         padding: 22px;
     }
     .mensaje:focus {
@@ -700,9 +700,9 @@ alert{
         background-position: center -732px;
         background-size: 110%;
         width: 489px;
-        height: 59px;
+        height: 73px;
         margin-left: -666px;
-        margin-top: 733px;
+        margin-top: 698px;
     }
     .mensaje:focus {
         outline: none;
@@ -789,9 +789,9 @@ alert{
         background-position: center -765px;
         background-size: 110%;
         width: 566px;
-        height: 123px;
+        height: 152px;
         margin-left: -706px;
-        margin-top: 835px;
+        margin-top: 792px;
         padding: 30px;
     }
     .mensaje:focus {
@@ -828,5 +828,8 @@ alert{
     body{
         background-size: 122%;
         background-position: 50%;
+    }
+    .mensaje{
+        height: 500px;
     }
 }
