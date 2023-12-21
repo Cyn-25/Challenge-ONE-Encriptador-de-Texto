@@ -1,67 +1,99 @@
-const escribirTexto = document.querySelector(".escribirTexto")
+const textArea = document.querySelector(".text-area");
 const mensaje = document.querySelector(".mensaje");
-const copia = document.querySelector(".botonCopiar")
+const copia = document.querySelector(".copiar");
 copia.style.display = "none"
 
-function validarTexto(){
-    let escribirTexto = document.querySelector(".escribirTexto").value;
-    let sinAcentos = escribirTexto.match(/^[a-z ]*$/);
 
-    if(!sinAcentos || sinAcentos === 0) {
-        alert("No utilizar mayúsculas ni acentos")
+
+
+function validarTexto(){
+    let textoEscrito = document.querySelector(".text-area").value;
+    let validador = textoEscrito.match(/^[a-z ]*$/);
+
+    if(!validador || validador === 0) {
+        alert("Solo son permitidas letras minúsculas y sin acentos")
         location.reload();
         return true;
     }
 }
 
-function botonEncriptar(){
+function pegarTexto() {
+    // Obtener el área de texto
+    var textarea = document.querySelector('.text-area');
+
+    // Pegar el texto del portapapeles
+    navigator.clipboard.readText()
+        .then(textoPegado => {
+            // Asignar el texto pegado al área de texto
+            textarea.value = textoPegado;
+        })
+        .catch(err => {
+            console.error('No se pudo pegar el texto: ', err);
+        });
+}
+
+function btnEncriptar(){
     if(!validarTexto()) {
-        const textoEncriptado = encriptar(escribirTexto.value)
+        const textoEncriptado = encriptar(textArea.value)
         mensaje.value = textoEncriptado
-        escribirTexto.value = "";
         mensaje.style.backgroundImage = "none"
+        textArea.value = "";
         copia.style.display = "block"
-    }
-}    
-
-function encriptar(stringEncriptado){
-    let letrasCambiadas = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
-    stringEncriptado = stringEncriptado.toLowerCase();/*Convertir las letras a minúsculas*/
     
-
-    for(let i = 0; i < letrasCambiadas.length; i++){
-        if (stringEncriptado.includes(letrasCambiadas[i][0])){
-            stringEncriptado = stringEncriptado.replaceAll(letrasCambiadas[i][0], letrasCambiadas[i][1])
-        }
     }
-    return stringEncriptado
+}
+
+//Laves de encriptacion
+// `La letra "e" es convertida para "enter"`
+// `La letra "i" es convertida para "imes"`
+// `La letra "a" es convertida para "ai"`
+// `La letra "o" es convertida para "ober"`
+// `La letra "u" es convertida para "ufat"`
+
+
+function encriptar(stringEncriptada){
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    stringEncriptada = stringEncriptada.toLowerCase()
+
+    for(let i = 0; i < matrizCodigo.length; i++){
+        if(stringEncriptada.includes(matrizCodigo[i][0])){
+            stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1])
+
+        }
+
+    }
+    return stringEncriptada
 }
 
 
 
-function desencriptar(stringDesencriptado){
-    let letrasCambiadas = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
-    stringDesencriptado = stringDesencriptado.toLowerCase();/*Convertir las letras a minúsculas*/
+function btnDesencriptar(){
+    const textoEncriptado = desencriptar(textArea.value)
+    mensaje.value = textoEncriptado
+    textArea.value = "";
     
+}
 
-    for(let i = 0; i < letrasCambiadas.length; i++){
-        if (stringDesencriptado.includes(letrasCambiadas[i][1])) {
-            stringDesencriptado = stringDesencriptado.replaceAll(letrasCambiadas[i][1], letrasCambiadas[i][0])
+
+function desencriptar(stringDesencriptada){
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    stringDesencriptada = stringDesencriptada.toLowerCase()
+
+    for(let i = 0; i < matrizCodigo.length; i++){
+        if(stringDesencriptada.includes(matrizCodigo[i][1])){
+            stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][1] , matrizCodigo[i][0])
+
         }
+
     }
-    return stringDesencriptado 
+    return stringDesencriptada
 }
 
-function botonDesencriptar(){
-    const textoEncriptado = desencriptar(escribirTexto.value)
-    mensaje.value = textoEncriptado;
-    textoEncriptado.value = "";
-}
 
-function botonCopiar(){
+function copiar(){
     mensaje.select();
     navigator.clipboard.writeText(mensaje.value)
     mensaje.value = "";
     alert("Texto Copiado")
+    textArea.select();
 }
-

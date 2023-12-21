@@ -1,0 +1,63 @@
+:root{
+    --tipoFuente: 'Rajdhani', sans-serif;
+    --fuente-color: #d1d0ea;
+    --fuente-btn: #f0eaf4;
+    
+    --btn-encriptar: #0f0e32;
+    --btn-desencriptar: #4d083f;
+    --copiar: rgb(78, 19, 55);
+    --pegar: #292b6f;
+
+    --cajas-color: #190e19;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    padding-right: 4%;
+    padding-left: 3%;
+    padding-top: 1%;
+}
+body{   
+    background-image: url(imagenes/sky.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: var(--tipoFuente);
+    font-weight: 500;
+    color: var(--fuente-color);
+    font-size: 16px;
+    background-color: #14001b;
+    opacity: 0.8;
+}
+
+main , footer{
+    padding-right: 8%;
+    padding-left: 8%;
+    padding-top: 2%;
+}
+
+footer p{
+    color: #ecebeb;
+    text-align: center;
+    position: relative;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1024px) {
+    body{       
+        background-size: cover;
+    }
+    
+    footer p{
+        padding-top: 2.3%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body{       
+        background-size: cover;
+    }
+}

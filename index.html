@@ -5,60 +5,63 @@
     <head> <!--Aquí se colocan las etiquetas informativas-->
 
         <meta charset = "UTF-8"> <!--Indica el diccionario que queremos que use-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width"><!--Decir que nuestra página se adapte a cualquier dispositivo-->
         <title>Encriptador de texto</title> <!--Definir el nombre de la página que aparecerá en la pestaña-->
-        <link rel="icon" href="imagenes/umbrella icon.ico">
+        <link rel="icon" href="imagenes/mirrorball.png">
+        <link rel="stylesheet" href="normalize.css">
         <link rel="stylesheet" href="reset.css"> <!-- El navegador crea el estilo para todas las etiquetas que considera adecuadas, entonces, necesitamos moverlo para que el estilo que creemos no sea influenciado por el estilo que el navegador agregue.-->
+        <link rel="stylesheet" href="bases.css">
         <link rel="stylesheet" href="style.css"> <!--Se crea un archivo css para poder poner los estilos que deseemos y al final referenciar ese archivo al html con el fi de aplicar esos estilos y propiedades.-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+
+
 
     </head>
     
     <body> <!--Aquí defino las etiquetas de contenido-->
 
-        <div class="encriptadorTexto">
-            <header class="Encabezado">
-                <img src="imagenes/umbrella corp.png" alt="" id="umbrella">
-            </header>
+        <header class="encabezado">
+            <img src="imagenes/mirrorball.png" alt="" id="umbrella" class="logo-encabezado">
+        </header>
             
-            <main>
-                <div class="contenido">
-                    
-                    <section class="encriptar">
-                        <div>
-                            <textarea cols="30" rows="10" class="escribirTexto" placeholder="Escribe tu texto"></textarea required> 
-                        </div>
-                        <div class="advertencia">
-                            <p>&#9888;No utilizar mayúsculas ni acentos</p>    
-                        </div>
-
-                        <div class="botones">
-                            <button class="botonEncriptar" onclick="botonEncriptar()">Encriptar</button>
-                            <button class="botonDesencriptar" onclick="botonDesencriptar()">Desencriptar</button>
-                            <button class="botonCopiar" onclick="botonCopiar()">Copiar</button>
-                        </div>
-                    </section>
-                    
-                    <section class="encriptado">  
-                        <div>
-                            <textarea class="mensaje" cols="20" rows="10"></textarea>
-                        </div>
-                    </section>
-                </div>
-            </main>
-            
-            <footer><!--Pie de página-->  
-                <div class="redes">
-                    <a href="https://www.linkedin.com/in/cynthia-hernandez-rodriguez-iaev/" target="_blank" class="fa-brands fa-linkedin" id="linkedin"></a>
-                    <a href="https://github.com/Cyn-25" target="_blank" class="fa-brands fa-github" id="github"></a>
-                    <a href="https://cynthia_hr.artstation.com/" target="_blank" class="fa-brands fa-artstation" id="artstation"></a>
-                    <a href="https://www.behance.net/cynthiahr25" target="_blank" class="fa-brands fa-square-behance" id="behance"></a>
-                </div>
+        <main class="contenido">
+            <section class="input">
+                <textarea class="text-area" cols="30" rows="19" placeholder="Ingrese el texto aqui"></textarea>
                 <div>
-                    <p>Desarrollado por Cynthia Hernández</p>
+                    <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
                 </div>
-            </footer> 
-        </div>
+                <div class="botones">
+                    <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                    <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                    <button class="pegar" onclick="pegarTexto()">Pegar</button>
+                </div>
+            </section>
+                
+            <section class="output">
+                <textarea class="mensaje" cols="20" rows="19"></textarea>
+                <div>
+                    <button class="copiar" onclick="copiar()">Copiar</button>
+                </div>
+            </section>
+            
+        </main>
+            
+        <footer><!--Pie de página-->  
+            <div class="redes">
+                <a href="https://www.linkedin.com/in/cynthia-hernandez-rodriguez-iaev/" target="_blank" class="fa-brands fa-linkedin" id="linkedin"></a>
+                <a href="https://github.com/Cyn-25" target="_blank" class="fa-brands fa-github" id="github"></a>
+                <a href="https://cynthia_hr.artstation.com/" target="_blank" class="fa-brands fa-artstation" id="artstation"></a>
+                <a href="https://www.behance.net/cynthiahr25" target="_blank" class="fa-brands fa-square-behance" id="behance"></a>
+            </div>
+            
+            <div>
+                <p class="creditos">Desarrollado por Cynthia Hernández</p>
+            </div>
+        </footer> 
         <script src="Encriptador.js"></script>
     </body> 
 </html>
